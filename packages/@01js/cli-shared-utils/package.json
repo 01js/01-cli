@@ -1,27 +1,23 @@
 {
-  "name": "@01js/cli",
-  "version": "0.0.2",
+	"name": "@01js/cli-shared-utils",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "bin": {
-    "01js": "bin/01js.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/01js/01-cli.git"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "chalk": "^3.0.0",
-    "commander": "^4.0.1",
-    "semver": "^6.3.0"
-  },
-  "engines": {
-    "node": ">=8.9"
-  },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "semver": "^6.3.0"
   }
 }
