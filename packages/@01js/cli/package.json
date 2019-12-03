@@ -14,9 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^3.0.0",
+    "@01js/cli-shared-utils": "^1.0.1",
     "commander": "^4.0.1",
-    "semver": "^6.3.0"
+    "didyoumean": "^1.2.1",
+    "minimist": "^1.2.0",
+    "slash": "^3.0.0"
   },
   "engines": {
     "node": ">=8.9"

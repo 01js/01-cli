@@ -1,0 +1,4 @@
+[didyoumean](https://github.com/dcporter/didyoumean.js)
+[slash](https://github.com/sindresorhus/slash)
+[minimist](https://github.com/substack/minimist)
+[commander](https://github.com/tj/commander.js)
