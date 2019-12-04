@@ -1,6 +1,7 @@
 const path = require('path')
 
-const { stopSpinner } = require('@vue/cli-shared-utils')
+const { stopSpinner } = require('@01js/cli-shared-utils')
+debugger
 async function create (projectName, options) {
   if (options.proxy) {
     process.env.HTTP_PROXY = options.proxy
