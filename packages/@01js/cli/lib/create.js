@@ -1,7 +1,8 @@
 const path = require('path')
+const { clearConsole } = require('./util/clearConsole')
+const { stopSpinner, error } = require('@01js/cli-shared-utils')
+const validateProjectName = require('validate-npm-package-name')
 
-const { stopSpinner } = require('@01js/cli-shared-utils')
-debugger
 async function create (projectName, options) {
   if (options.proxy) {
     process.env.HTTP_PROXY = options.proxy
@@ -11,6 +12,25 @@ async function create (projectName, options) {
   const inCurrent = projectName === '.'
   const name = inCurrent ? path.relative('../', cwd) : projectName
   const targetDir = path.resolve(cwd, projectName || '.')
+
+  const result = validateProjectName(name)
+  if (!result.validForNewPackages) {
+    console.error(chalk.red(`Invalid project name: "${name}"`))
+    result.errors && result.errors.forEach(err => {
+      console.error(chalk.red.dim('Error: ' + err))
+    })
+    result.warnings && result.warnings.forEach(warn => {
+      console.error(chalk.red.dim('Warning: ' + warn))
+    })
+    exit(1)
+  }
+  if (fs.existsSync(targetDir)) {
+    if (options.force) {
+      await fs.remove(targetDir)
+    } else {
+      await clearConsole()
+    }
+  }
 }
 
 

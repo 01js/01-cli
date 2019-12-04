@@ -1,3 +1,5 @@
 [chalk](https://github.com/chalk/chalk)
 [semver](https://github.com/npm/node-semver)
 [ora](https://github.com/sindresorhus/ora)
+[strip-ansi](https://github.com/chalk/strip-ansi)
+[string.prototype.padstart](https://github.com/es-shims/String.prototype.padStart)

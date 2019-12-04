@@ -14,11 +14,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@01js/cli-shared-utils": "^1.0.2",
+    "@01js/cli-shared-utils": "0.0.4",
     "commander": "^4.0.1",
     "didyoumean": "^1.2.1",
     "minimist": "^1.2.0",
-    "slash": "^3.0.0"
+    "slash": "^3.0.0",
+    "validate-npm-package-name": "^3.0.0"
   },
   "engines": {
     "node": ">=8.9"
