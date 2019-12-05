@@ -8,7 +8,8 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}/packages\\@01js\\cli\\lib\\create.js"
+            "program": "${workspaceFolder}/packages\\@01js\\cli\\bin\\01js.js",
+            "args": ["app"],
         }
     ]
 }

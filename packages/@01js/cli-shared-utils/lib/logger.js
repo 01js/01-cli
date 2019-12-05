@@ -1,6 +1,6 @@
 const padStart = require('string.prototype.padstart')
 const stripAnsi = require('strip-ansi')
-
+const chalk = require('chalk')
 function _log (type, tag, message) {
   if (process.env.CLI_API_MODE && message) {
     exports.events.emit('log', {

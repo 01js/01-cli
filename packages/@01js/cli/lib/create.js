@@ -1,5 +1,8 @@
 const path = require('path')
+const fs = require('fs-extra')
+const Creator = require('./Creator')
 const { clearConsole } = require('./util/clearConsole')
+const { getPromptModules } = require('./util/createTools')
 const { stopSpinner, error } = require('@01js/cli-shared-utils')
 const validateProjectName = require('validate-npm-package-name')
 
@@ -24,6 +27,7 @@ async function create (projectName, options) {
     })
     exit(1)
   }
+  // 存在该目录
   if (fs.existsSync(targetDir)) {
     if (options.force) {
       await fs.remove(targetDir)
@@ -31,6 +35,8 @@ async function create (projectName, options) {
       await clearConsole()
     }
   }
+  
+  const creator = new Creator(name, targetDir, getPromptModules())
 }
 
 
